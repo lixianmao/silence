@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_play_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/song"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_play_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_play_song"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/singer"
+        android:textSize="15sp" />
+
+    
+
+    
+
+    <RelativeLayout
+        android:id="@+id/control_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp" >
+		<ImageButton
+            android:id="@+id/play_state"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/play"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+		<ImageButton
+            android:id="@+id/play_pre"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/play_state"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/pre"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+		<ImageButton
+            android:id="@+id/play_next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/play_state"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/next"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+        <ImageButton
+            android:id="@+id/play_mode"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/play_pre"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/sequence"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+        <ImageButton
+            android:id="@+id/play_love"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/play_next"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/black_heart"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/control_button"
+        android:layout_marginBottom="15dp" >
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+    
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/time"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="5dp" />
+	<listener_adapter.LyricView
+        android:id="@+id/lyricView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_play_singer"
+        android:layout_above="@id/seekbar"
+        android:layout_marginTop="10dp" />
+    
+</RelativeLayout>

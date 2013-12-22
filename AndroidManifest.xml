@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.hustunique.silence"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="org.hustunique.silence.StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="useless.SongListActivity"
+            android:label="@string/title_activity_song_list" >
+        </activity>
+        <activity
+            android:name="useless.AlbumListActivity"
+            android:label="@string/title_activity_album_list" >
+        </activity>
+        <activity
+            android:name="useless.SingerListActivity"
+            android:label="@string/title_activity_singer_list" >
+        </activity>
+        <activity
+            android:name="useless.FavoriteActivity"
+            android:label="@string/title_activity_favorite" >
+        </activity>
+        <activity
+            android:name="org.hustunique.silence.ViewPagerActivity"
+            android:label="@string/title_activity_view_pager"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="org.hustunique.silence.PlayerActivity"
+            android:label="@string/title_activity_player" >
+        </activity>
+
+        <service
+            android:name="org.hustunique.silence.PlayerService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <receiver
+            android:name="listener_adapter.ProgressReceiver"
+            android:enabled="true"
+            android:exported="true" >
+        </receiver>
+        <receiver android:name="org.hustunique.silence.SilenceDeskTop"
+           	android:label="silence_widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="widget_next"/>
+                <action android:name="widget_pre"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/silence_provider" >
+            </meta-data>
+        </receiver>
+    </application>
+
+</manifest>

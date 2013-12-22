@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">silence</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="enter">进入</string>
+    <string name="song">歌曲</string>
+    <string name="singer">歌手</string>
+    <string name="album">专辑</string>
+    <string name="favorite">最爱</string>
+    <string name="title_activity_song_list">SongListActivity</string>
+    <string name="title_activity_album_list">AlbumListActivity</string>
+    <string name="title_activity_singer_list">SingerListActivity</string>
+    <string name="title_activity_favorite">FavoriteActivity</string>
+    <string name="title_activity_view_pager">ViewPagerActivity</string>
+    <string name="title_activity_player">PlayerActivity</string>
+
+</resources>
